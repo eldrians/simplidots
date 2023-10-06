@@ -1,9 +1,56 @@
-<div class="w-full flex flex-col justify-center items-center">
-  <div class="w-1/3 py-20">
-    <img
-      src="https://image.tmdb.org/t/p/original/{{ movie.backdrop_path }}"
-      alt="..."
-    />
-    <h3>{{ movie.original_title }}</h3>
+<div class="w-full px-20 pt-10">
+  <button
+    class="border border-primaryApp/80 py-1 px-4 rounded text-xs hover:bg-primaryApp group"
+  >
+    <span
+      class="text-primaryApp/80 group-hover:text-lightApp"
+      [routerLink]="['/movies']"
+      >Back</span
+    >
+  </button>
+</div>
+<div class="w-full">
+  <div class="w-full relative h-[400px] px-20 border-b border-primaryApp/60">
+    <div
+      class="absolute w-3/4 h-full z-30 flex flex-row pt-10 pb-20 justify-start items-center gap-10"
+    >
+      <img
+        src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}"
+        alt="..."
+        class="w-[200px] rounded shadow"
+      />
+      <div class="h-full">
+        <h1 class="text-4xl font-semibold text-primaryApp/90">
+          {{ movie.original_title }}
+          <span class="font-normal text-xl text-darkApp/50"
+            >( {{ movie.release_date }} )
+          </span>
+        </h1>
+        <!-- genre -->
+        <div class="flex flex-row gap-2 text-xs ml-2 my-2 text-primaryApp/70">
+          <p
+            class="py-0.5 px-1 rounded border border-primaryApp/70 font-semibold"
+          >
+            fantasy
+          </p>
+          <p
+            class="py-0.5 px-1 rounded border border-primaryApp/70 font-semibold"
+          >
+            comedy
+          </p>
+        </div>
+
+        <p class="ml-2 mb-4 text-xs text-yellow-600">
+          {{ movie.vote_average }}
+        </p>
+
+        <div class="ml-2">
+          <h4 class="text-lg font-semibold">Overview</h4>
+          <p class="text-xs text-darkApp/60 text-justify">
+            {{ movie.overview }}
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

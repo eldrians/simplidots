@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from 'src/app/services/movies.service';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
 })
 export class MoviesComponent implements OnInit {
+  faStar = faStar;
+  isFavourite = true;
+
   movies: any = [];
   constructor(private service: MoviesService) {}
 

@@ -21,10 +21,10 @@
             <p class="text-xs text-darkApp/50">{{ movie.release_date }}</p>
           </div>
           <button
-            class="p-1 bg-pink-500 rounded shadow text-xs"
+            class="p-1 bg-primaryApp rounded text-sm"
             (click)="removeFavourite(movie.id)"
           >
-            remove
+            <fa-icon [icon]="faStar" class="text-yellow-400"></fa-icon>
           </button>
         </div>
       </div>

@@ -21,10 +21,18 @@
             <p class="text-xs text-darkApp/50">{{ movie.release_date }}</p>
           </div>
           <button
-            class="p-1 bg-pink-500 rounded shadow text-xs"
+            class="p-1 bg-primaryApp rounded text-sm"
             (click)="addFavourite(movie.id)"
+            *ngIf="isFavourite"
           >
-            Fav Me!
+            <fa-icon [icon]="faStar" class="text-yellow-400"></fa-icon>
+          </button>
+          <button
+            class="p-1 border border-primaryApp/70 rounded text-sm"
+            (click)="removeFavourite(movie.id)"
+            *ngIf="!isFavourite"
+          >
+            <fa-icon [icon]="faStar" class="text-primaryApp/70"></fa-icon>
           </button>
         </div>
       </div>
