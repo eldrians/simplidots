@@ -9,10 +9,11 @@ import { FavouritesComponent } from './modules/favourites/favourites.component';
 import { MovieDetailComponent } from './modules/movie-detail/movie-detail.component';
 import { HeaderComponent } from './modules/header/header.component';
 import { SidebarComponent } from './modules/sidebar/sidebar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, MoviesComponent, FavouritesComponent, MovieDetailComponent, HeaderComponent, SidebarComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
