@@ -7,9 +7,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { MoviesComponent } from './modules/movies/movies.component';
 import { FavouritesComponent } from './modules/favourites/favourites.component';
 import { MovieDetailComponent } from './modules/movie-detail/movie-detail.component';
+import { HeaderComponent } from './modules/header/header.component';
+import { SidebarComponent } from './modules/sidebar/sidebar.component';
 
 @NgModule({
-  declarations: [AppComponent, MoviesComponent, FavouritesComponent, MovieDetailComponent],
+  declarations: [AppComponent, MoviesComponent, FavouritesComponent, MovieDetailComponent, HeaderComponent, SidebarComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

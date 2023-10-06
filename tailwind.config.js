@@ -4,13 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primaryESB: "#ff6600",
-        secondaryESB: "#ffeadc",
-        redESB: "#FF8780",
-        grayESB: "#929292",
-        secondaryGrayESB: "#F5F7FC",
-        lightESB: "#ffffff",
-        darkESB: "#040404",
+        primaryApp: "#032541",
+        secondaryApp: "#0EB6DE",
+        lightApp: "#ffffff",
+        darkApp: "#0D0D0D",
+        redSD: "#FA414F",
+        graySD: "#637591",
       },
     },
   },

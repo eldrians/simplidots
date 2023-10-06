@@ -1,1 +1,11 @@
-<router-outlet></router-outlet>
+<div class="w-full flex flex-row">
+  <div class="w-1/5">
+    <app-sidebar class="w-1/5 fixed"></app-sidebar>
+  </div>
+  <div class="w-4/5">
+    <div class="w-4/5 h-[50px]">
+      <app-header class="w-4/5 h-[50px] fixed z-50"></app-header>
+    </div>
+    <router-outlet class="z-10"></router-outlet>
+  </div>
+</div>
