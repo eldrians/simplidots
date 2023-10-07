@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { IMovie } from 'src/app/core/interfaces/movie.model';
 import { MovieDetailService } from 'src/app/core/services';
 
 @Component({
@@ -14,13 +15,12 @@ export class MovieDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    let getParamId = this.router.snapshot.paramMap.get('id');
-    console.log(getParamId);
-
+    let getParamId: number | string | null =
+      this.router.snapshot.paramMap.get('id');
     this.getMovie(getParamId);
   }
 
-  getMovie(id: any) {
+  getMovie(id: number | string | null) {
     this.service.getMovieDetail(id).subscribe((res) => {
       this.movie = res;
     });

@@ -10,8 +10,8 @@ import { environment } from 'src/environments/environment';
 export class MovieDetailService {
   constructor(private http: HttpClient) {}
 
-  getMovieDetail(data: any): Observable<any> {
-    return this.http.get(
+  getMovieDetail(data: number | string | null): Observable<any> {
+    return this.http.get<any>(
       `${constant.baseUrl}/movie/${data}?api_key=${environment.apiKey}`
     );
   }
