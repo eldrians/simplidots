@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MoviesComponent } from './modules/movies/movies.component';
-import { FavouritesComponent } from './modules/favourites/favourites.component';
 import { MovieDetailComponent } from './modules/movie-detail/movie-detail.component';
+import { MovieListComponent } from './pages/movie/movie-list/movie-list.component';
+import { UserFavoriteComponent } from './pages/user/user-favorite/user-favorite.component';
 
 const routes: Routes = [
-  { path: '', component: MoviesComponent },
-  { path: 'movies', component: MoviesComponent },
+  { path: '', component: MovieListComponent },
+  { path: 'movies', component: MovieListComponent },
   { path: 'movie/:id', component: MovieDetailComponent },
-  { path: 'favourites', component: FavouritesComponent },
+  { path: 'favorites', component: UserFavoriteComponent },
 ];
 
 @NgModule({
