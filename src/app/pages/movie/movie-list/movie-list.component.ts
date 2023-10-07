@@ -1,10 +1,47 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MoviesService } from 'src/app/core/services/movies.service';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
-  styleUrls: ['./movie-list.component.css']
 })
-export class MovieListComponent {
+export class MovieListComponent implements OnInit {
+  faStar = faStar;
+  isFavourite = true;
 
+  movies: any = [];
+  constructor(private service: MoviesService) {}
+
+  ngOnInit(): void {
+    this.bannerData();
+  }
+
+  bannerData() {
+    this.service.bannerApiData().subscribe((res) => {
+      this.movies = res.results;
+    });
+  }
+
+  addFavourite(id: number) {
+    let data = {
+      media_type: 'movie',
+      media_id: id,
+      favorite: true,
+    };
+    this.service.handleFavourite(data).subscribe((res) => {
+      console.log(res);
+    });
+  }
+
+  removeFavourite(id: number) {
+    let data = {
+      media_type: 'movie',
+      media_id: id,
+      favorite: false,
+    };
+    this.service.handleFavourite(data).subscribe((res) => {
+      console.log(res);
+    });
+  }
 }
