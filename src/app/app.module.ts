@@ -14,6 +14,7 @@ import {
   SidebarComponent,
   CardComponent,
   ButtonComponent,
+  FooterComponent,
 } from './shared/components';
 
 @NgModule({
@@ -25,6 +26,7 @@ import {
     UserFavoriteComponent,
     CardComponent,
     ButtonComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

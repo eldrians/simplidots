@@ -6,20 +6,27 @@
   </div>
   <div class="w-full h-4/6 p-6">
     <ul>
-      <li class="mb-4">
-        <h2
-          class="text-sm font-bold text-lightApp cursor-pointer"
-          [routerLink]="['favorites']"
-        >
-          Favorite
-        </h2>
+      <li>
+        <div>
+          <h2 class="text-sm font-bold text-lightApp/80 cursor-default">
+            User
+          </h2>
+          <ul class="flex flex-col gap-3 px-4 my-3">
+            <li
+              class="text-xs text-lightApp cursor-pointer"
+              [routerLink]="['favorites']"
+            >
+              My Favorite
+            </li>
+          </ul>
+        </div>
       </li>
       <li>
         <div>
           <h2 class="text-sm font-bold text-lightApp/80 cursor-default">
             Discover
           </h2>
-          <ul class="flex flex-col gap-3 px-4 my-4">
+          <ul class="flex flex-col gap-3 px-4 my-3">
             <li
               class="text-xs text-lightApp cursor-pointer"
               [routerLink]="['movies']"
@@ -28,18 +35,6 @@
             </li>
             <li class="text-xs text-lightApp cursor-pointer">Top Rated</li>
             <li class="text-xs text-lightApp cursor-pointer">Upcoming</li>
-          </ul>
-        </div>
-      </li>
-      <li>
-        <div>
-          <h2 class="text-sm font-bold text-lightApp/80 cursor-default">
-            Genre
-          </h2>
-          <ul class="flex flex-col gap-3 px-4 my-4">
-            <li class="text-xs text-lightApp cursor-pointer">Action</li>
-            <li class="text-xs text-lightApp cursor-pointer">Comedy</li>
-            <li class="text-xs text-lightApp cursor-pointer">Horror</li>
           </ul>
         </div>
       </li>

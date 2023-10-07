@@ -18,6 +18,14 @@ export class MovieService {
     );
   }
 
+  // get movie from their type
+  getMoviesFromType(type: string): Observable<any> {
+    // now_playing, popular, top_rated, upcoming
+    return this.http.get<any>(
+      `${constant.baseUrl}/movie/${type}?api_key=${environment.apiKey}`
+    );
+  }
+
   // get movies detail
   getMovieDetail(data: number | string | null): Observable<any> {
     return this.http.get<any>(
