@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviesService } from 'src/app/core/services/movies.service';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { MovieListService } from 'src/app/core/services/movie/movie-list/movie-list.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -11,14 +11,14 @@ export class MovieListComponent implements OnInit {
   isFavourite = true;
 
   movies: any = [];
-  constructor(private service: MoviesService) {}
+  constructor(private service: MovieListService) {}
 
   ngOnInit(): void {
     this.bannerData();
   }
 
   bannerData() {
-    this.service.bannerApiData().subscribe((res) => {
+    this.service.getMovies().subscribe((res) => {
       this.movies = res.results;
     });
   }
@@ -29,7 +29,7 @@ export class MovieListComponent implements OnInit {
       media_id: id,
       favorite: true,
     };
-    this.service.handleFavourite(data).subscribe((res) => {
+    this.service.favoriteHandler(data).subscribe((res) => {
       console.log(res);
     });
   }
@@ -40,7 +40,7 @@ export class MovieListComponent implements OnInit {
       media_id: id,
       favorite: false,
     };
-    this.service.handleFavourite(data).subscribe((res) => {
+    this.service.favoriteHandler(data).subscribe((res) => {
       console.log(res);
     });
   }
