@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviesService } from 'src/app/services/movies.service';
+import { MoviesService } from 'src/app/core/services/movies.service';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
