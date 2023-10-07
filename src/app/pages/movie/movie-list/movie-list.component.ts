@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { MovieListService } from 'src/app/core/services/movie/movie-list/movie-list.service';
+import { MovieListService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-movie-list',

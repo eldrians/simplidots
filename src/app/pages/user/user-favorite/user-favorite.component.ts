@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviesService } from 'src/app/core/services/movies.service';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { UserFavoriteService } from 'src/app/core/services/userService/user-favorite/user-favorite.service';
+import { UserFavoriteService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-user-favorite',
