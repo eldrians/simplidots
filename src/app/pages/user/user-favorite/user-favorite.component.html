@@ -5,7 +5,7 @@
   </div>
   <div class="w-full grid grid-cols-3 gap-6">
     <div *ngFor="let movie of favouriteMovie">
-      <app-card [movie]="movie"></app-card>
+      <app-card [movie]="movie" [toAdd]="false"></app-card>
     </div>
   </div>
 </div>

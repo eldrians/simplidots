@@ -14,30 +14,27 @@ type TFavoriteHandler = {
 })
 export class CardComponent implements OnInit {
   @Input() movie: IMovie | undefined;
-  @Input() title?: string = '';
+  @Input() toAdd?: boolean;
   favoriteHandler: TFavoriteHandler | undefined;
 
   constructor(private service: MovieListService) {}
 
   ngOnInit(): void {}
 
-  addFavourite(id: number) {
-    this.favoriteHandler = {
-      media_type: 'movie',
-      media_id: id,
-      favorite: true,
-    };
-    this.service.favoriteHandler(this.favoriteHandler).subscribe((res) => {
-      console.log(res);
-    });
-  }
-
-  removeFavourite(id: number) {
-    this.favoriteHandler = {
-      media_type: 'movie',
-      media_id: id,
-      favorite: false,
-    };
+  addRemoveFavorite(id: number) {
+    if (this.toAdd == true) {
+      this.favoriteHandler = {
+        media_type: 'movie',
+        media_id: id,
+        favorite: true,
+      };
+    } else if (this.toAdd == false) {
+      this.favoriteHandler = {
+        media_type: 'movie',
+        media_id: id,
+        favorite: false,
+      };
+    }
     this.service.favoriteHandler(this.favoriteHandler).subscribe((res) => {
       console.log(res);
     });
