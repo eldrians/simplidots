@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { IMovie } from 'src/app/core/interfaces/movie.model';
-import { UserFavoriteService } from 'src/app/core/services';
+import { UserService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-user-favorite',
@@ -11,14 +11,14 @@ export class UserFavoriteComponent implements OnInit {
   faStar = faStar;
   favouriteMovie: IMovie[] = [];
 
-  constructor(private service: UserFavoriteService) {}
+  constructor(private userServices: UserService) {}
 
   ngOnInit(): void {
     this.getFavouriteMovie();
   }
 
   getFavouriteMovie() {
-    this.service.getFavorites().subscribe((res) => {
+    this.userServices.getFavorites().subscribe((res) => {
       this.favouriteMovie = res.results;
     });
   }

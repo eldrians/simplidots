@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IMovie } from 'src/app/core/interfaces/movie.model';
-import { MovieDetailService } from 'src/app/core/services';
+import { MovieService, UserService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-movie-detail',
@@ -10,7 +9,8 @@ import { MovieDetailService } from 'src/app/core/services';
 export class MovieDetailComponent implements OnInit {
   movie: any;
   constructor(
-    private service: MovieDetailService,
+    private movieServices: MovieService,
+    private userServices: UserService,
     private router: ActivatedRoute
   ) {}
 
@@ -21,7 +21,7 @@ export class MovieDetailComponent implements OnInit {
   }
 
   getMovie(id: number | string | null) {
-    this.service.getMovieDetail(id).subscribe((res) => {
+    this.movieServices.getMovieDetail(id).subscribe((res) => {
       this.movie = res;
     });
   }

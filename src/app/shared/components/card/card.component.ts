@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IMovie } from 'src/app/core/interfaces/movie.model';
-import { MovieListService } from 'src/app/core/services';
+import { UserService } from 'src/app/core/services';
 
 type TFavoriteHandler = {
   media_type: string;
@@ -17,11 +17,11 @@ export class CardComponent implements OnInit {
   @Input() toAdd?: boolean;
   favoriteHandler: TFavoriteHandler | undefined;
 
-  constructor(private service: MovieListService) {}
+  constructor(private userServices: UserService) {}
 
   ngOnInit(): void {}
 
-  addRemoveFavorite(id: number) {
+  setFavorite(id: number) {
     if (this.toAdd == true) {
       this.favoriteHandler = {
         media_type: 'movie',
@@ -35,7 +35,7 @@ export class CardComponent implements OnInit {
         favorite: false,
       };
     }
-    this.service.favoriteHandler(this.favoriteHandler).subscribe((res) => {
+    this.userServices.favoriteHandler(this.favoriteHandler).subscribe((res) => {
       console.log(res);
     });
   }
