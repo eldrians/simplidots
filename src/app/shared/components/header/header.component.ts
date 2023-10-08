@@ -18,10 +18,5 @@ export class HeaderComponent implements OnInit {
 
   menuClick(b: boolean) {
     this.isOpen = b;
-    if (this.isOpen == true) {
-      console.log('isOpen');
-    } else if (this.isOpen == false) {
-      console.log('isNotOpen');
-    }
   }
 }

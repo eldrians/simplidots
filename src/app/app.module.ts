@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -18,6 +19,7 @@ import {
 } from './shared/components';
 import { MovieDetailsComponent } from './pages/movie/movie-details/movie-details.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ListComponent } from './shared/components/list/list.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ButtonComponent,
     FooterComponent,
     MovieDetailsComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     FontAwesomeModule,
     NgbModule,
+    InfiniteScrollModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
