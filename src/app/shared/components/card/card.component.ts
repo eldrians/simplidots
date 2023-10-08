@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IMovie } from 'src/app/core/interfaces/movie.model';
-import { UserService } from 'src/app/core/services';
+import { IMovie } from '../../../../app/core/interfaces/movie.model';
+import { UserService } from '../../../../app/core/services';
 
 type TFavoriteHandler = {
   media_type: string;
