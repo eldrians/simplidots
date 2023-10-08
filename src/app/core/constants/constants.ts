@@ -1,5 +1,5 @@
 import { HttpHeaders } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 
 export const constant = {
   baseUrl: 'https://api.themoviedb.org/3',
