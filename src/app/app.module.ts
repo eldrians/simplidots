@@ -17,6 +17,7 @@ import {
   FooterComponent,
 } from './shared/components';
 import { MovieDetailsComponent } from './pages/movie/movie-details/movie-details.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MovieDetailsComponent } from './pages/movie/movie-details/movie-details
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

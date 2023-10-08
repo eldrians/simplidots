@@ -8,6 +8,7 @@ import { MovieService, UserService } from 'src/app/core/services';
 })
 export class MovieDetailsComponent implements OnInit {
   movie: any;
+
   constructor(
     private movieServices: MovieService,
     private userServices: UserService,
@@ -24,5 +25,10 @@ export class MovieDetailsComponent implements OnInit {
     this.movieServices.getMovieDetail(id).subscribe((res) => {
       this.movie = res;
     });
+  }
+
+  getRating(rate: number) {
+    rate;
+    return rate / 2;
   }
 }

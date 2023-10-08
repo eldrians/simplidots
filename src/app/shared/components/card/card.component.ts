@@ -39,4 +39,9 @@ export class CardComponent implements OnInit {
       console.log(res);
     });
   }
+
+  getRating(rate: number) {
+    rate;
+    return rate / 2;
+  }
 }
