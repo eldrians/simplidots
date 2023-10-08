@@ -91,6 +91,16 @@ gif
 
 gif
 
+#### Reponsive
+
+![responsive](https://github.com/eldrians/simplidots/assets/91566708/b8170186-1ec9-4974-8b19-5a679958b260)
+
+
+#### Infinite Scroll
+
+![infiniteScroll](https://github.com/eldrians/simplidots/assets/91566708/f72baa1c-5524-4981-a642-88622db4261e)
+
+
 #### PWA (mode offline)
 
 ![pwa](https://github.com/eldrians/simplidots/assets/91566708/fa50d1f1-f995-4dfe-868b-c3257f2824ed)
