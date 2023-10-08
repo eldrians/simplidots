@@ -1,46 +1,6 @@
 # SimpliDots - Movie App
 
-## Setup & Run
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-### Run App
-ada 2 cara yang diantaranya : 
-- Jalan tanpa PWA
-```
-  npm run start
-```
-- Dengan PWA
-
-```
-  ng build
-```
-
-masuk ke dist/simplidots, lalu open integrated terminal dan run command dibawah
-```
-  http-server -o
-```
-
-### Run Test
-
-- Test keseluruhan file
-```
-  npm run test
-```
-- Test spesifik file
-
-```
-  npx jest <nama file>
-```
-- Lihat coverage test
-
-```
-  npx jest test:coverage
-```
-
-## Task yang dikerjakan
-
-Berikut adalah daftar kriteria wajib yang sudah dikerjakan :
+Aplikasi Test Frontend Developer, berikut adalah daftar kriteria wajib yang sudah dikerjakan :
 
 | Task                              | Type             | Keterangan                                 |
 | :-------------------------------- | :--------------- | :----------------------------------------- |
@@ -56,6 +16,52 @@ Berikut adalah daftar kriteria wajib yang sudah dikerjakan :
 | `Unit Testing`                    | `Optional`       | **DONE** -> Jest 100% coverage             |
 | `PWA (Progressive Web App)`       | `Optional`       | **DONE** -> mode offline                   |
 | `Infinite Scroll`                 | `Optional`       | **DONE** -> ngx-infinite-scroll            |
+
+## Setup & Run
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+### Run App
+
+ada 2 cara yang diantaranya :
+
+- Jalan tanpa PWA
+
+```
+  npm run start
+```
+
+- Dengan PWA
+
+```
+  ng build
+```
+
+masuk ke dist/simplidots, lalu open integrated terminal dan run command dibawah
+
+```
+  http-server -o
+```
+
+### Run Test
+
+- Test keseluruhan file
+
+```
+  npm run test
+```
+
+- Test spesifik file
+
+```
+  npx jest <nama file>
+```
+
+- Lihat coverage test
+
+```
+  npx jest test:coverage
+```
 
 ## Documentation
 
