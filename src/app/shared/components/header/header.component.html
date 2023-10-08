@@ -1,12 +1,17 @@
 <header
-  class="w-full h-full flex flex-row justify-end items-center bg-primaryApp lg:bg-lightApp shadow"
+  class="w-full h-full flex flex-row justify-between lg:justify-end items-center bg-primaryApp lg:bg-lightApp shadow"
 >
   <div
     class="lg:block hidden px-6 lg:px-8 text-2xl lg:text-sm text-primaryApp/80"
   >
     Language
   </div>
-  <div class="block lg:hidden px-6 lg:px-8 text-2xl lg:text-sm text-lightApp">
+  <div class="block lg:hidden pl-6 md:pl-10 lg:pl-12">
+    <h1 class="text-lg font-bold text-lightApp">Movie App</h1>
+  </div>
+  <div
+    class="block lg:hidden pr-6 md:pr-10 lg:pr-12 text-2xl lg:text-sm text-lightApp"
+  >
     <fa-icon
       *ngIf="isOpen == false"
       [icon]="faBars"
