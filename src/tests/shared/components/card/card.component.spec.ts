@@ -30,8 +30,6 @@ describe('CardComponent', () => {
   it('should set favorite to true and call UserService when toAdd is true', () => {
     const movieId = 123;
     component.toAdd = true;
-
-    // Mock the favoriteHandler to return an observable
     mockUserService.favoriteHandler.mockReturnValue(of({}));
 
     component.setFavorite(movieId);
@@ -46,6 +44,12 @@ describe('CardComponent', () => {
     expect(mockUserService.favoriteHandler).toHaveBeenCalledWith(
       expectedFavoriteHandler
     );
+  });
+
+  it('should return half of a positive rate', () => {
+    const rate = 8.0;
+    const result = component.getRating(rate);
+    expect(result).toBe(4.0);
   });
 
   it('should set favorite to false and call UserService when toAdd is false', () => {
@@ -68,6 +72,4 @@ describe('CardComponent', () => {
       expectedFavoriteHandler
     );
   });
-
-  // You can add more test cases specific to your component's behavior here.
 });

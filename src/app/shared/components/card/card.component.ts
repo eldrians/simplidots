@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IMovie } from '../../../../app/core/interfaces/movie.model';
 import { UserService } from '../../../../app/core/services';
 
@@ -12,14 +12,12 @@ type TFavoriteHandler = {
   selector: 'app-card',
   templateUrl: './card.component.html',
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
   @Input() movie: IMovie | undefined;
   @Input() toAdd?: boolean;
   favoriteHandler: TFavoriteHandler | undefined;
 
   constructor(private userServices: UserService) {}
-
-  ngOnInit(): void {}
 
   setFavorite(id: number) {
     if (this.toAdd == true) {
