@@ -1,10 +1,42 @@
-# Project Title
+# SimpliDots - Movie App
 
-A brief description of what this project does and who it's for
-
-## How To Run
+## Setup & Run
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+### Run App
+ada 2 cara yang diantaranya : 
+- Jalan tanpa PWA
+```
+  npm run start
+```
+- Dengan PWA
+
+```
+  ng build
+```
+
+masuk ke dist/simplidots, lalu open integrated terminal dan run command dibawah
+```
+  http-server -o
+```
+
+### Run Test
+
+- Test keseluruhan file
+```
+  npm run test
+```
+- Test spesifik file
+
+```
+  npx jest <nama file>
+```
+- Lihat coverage test
+
+```
+  npx jest test:coverage
+```
 
 ## Task yang dikerjakan
 
@@ -24,6 +56,28 @@ Berikut adalah daftar kriteria wajib yang sudah dikerjakan :
 | `Unit Testing`                    | `Optional`       | **DONE** -> Jest 100% coverage             |
 | `PWA (Progressive Web App)`       | `Optional`       | **DONE** -> mode offline                   |
 | `Infinite Scroll`                 | `Optional`       | **DONE** -> ngx-infinite-scroll            |
+
+## Documentation
+
+### Demo
+
+#### Mark as Favorite
+
+gif
+
+#### Detail
+
+gif
+
+#### PWA (mode offline)
+
+gif
+
+### Unit Test
+
+#### coverage
+
+png
 
 ## API Reference
 
