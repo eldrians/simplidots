@@ -19,7 +19,23 @@ Aplikasi Test Frontend Developer, berikut adalah daftar kriteria wajib yang suda
 
 ## Setup & Run
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Setup
+
+Untuk setup project ini, buka terminal lalu jalankan :
+
+```
+  git clone https://github.com/eldrians/simplidots.git
+```
+
+buka aplikasi, buka terminal lagi, lalu jalankan
+
+```
+  npm i
+```
+
+```
+  ng serve
+```
 
 ### Run App
 
