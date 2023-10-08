@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { IMovie } from 'src/app/core/interfaces/movie.model';
-import { MovieService } from 'src/app/core/services';
+import { IMovie } from '../../../../app/core/interfaces/movie.model';
+import { MovieService } from '../../../../app/core/services';
 
 @Component({
   selector: 'app-movie-list',
