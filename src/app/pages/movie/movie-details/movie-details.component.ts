@@ -4,9 +4,9 @@ import { MovieService, UserService } from 'src/app/core/services';
 
 @Component({
   selector: 'app-movie-detail',
-  templateUrl: './movie-detail.component.html',
+  templateUrl: './movie-details.component.html',
 })
-export class MovieDetailComponent implements OnInit {
+export class MovieDetailsComponent implements OnInit {
   movie: any;
   constructor(
     private movieServices: MovieService,

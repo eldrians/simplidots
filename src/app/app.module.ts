@@ -16,6 +16,7 @@ import {
   ButtonComponent,
   FooterComponent,
 } from './shared/components';
+import { MovieDetailsComponent } from './pages/movie/movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {
     CardComponent,
     ButtonComponent,
     FooterComponent,
+    MovieDetailsComponent,
   ],
   imports: [
     BrowserModule,
