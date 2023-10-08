@@ -1,45 +1,34 @@
 <aside class="w-full h-screen flex flex-col bg-primaryApp">
+  <!-- logo -->
   <div
     class="w-full h-1/6 border-b border-white/50 flex justify-center items-center"
   >
     <h1 class="text-xl font-bold uppercase text-lightApp">movie app</h1>
   </div>
+
+  <!-- menu -->
   <div class="w-full h-4/6 p-6">
-    <ul>
-      <li>
-        <div>
-          <h2 class="text-sm font-bold text-lightApp/80 cursor-default">
-            User
-          </h2>
-          <ul class="flex flex-col gap-3 px-4 my-3">
-            <li
-              class="text-xs text-lightApp cursor-pointer"
-              [routerLink]="['favorites']"
-            >
-              My Favorite
-            </li>
-          </ul>
-        </div>
+    <ul class="flex flex-col gap-4 my-4">
+      <li [routerLink]="['favorites']" class="cursor-pointer">
+        <h2
+          class="text-sm 2xl:text-lg font-semibold text-lightApp hover:text-primaryApp py-1 px-4 hover:bg-lightApp rounded
+          transition duration-200 ease-in-out"
+        >
+          🔥 My Favorites
+        </h2>
       </li>
-      <li>
-        <div>
-          <h2 class="text-sm font-bold text-lightApp/80 cursor-default">
-            Discover
-          </h2>
-          <ul class="flex flex-col gap-3 px-4 my-3">
-            <li
-              class="text-xs text-lightApp cursor-pointer"
-              [routerLink]="['movies']"
-            >
-              Popular
-            </li>
-            <li class="text-xs text-lightApp cursor-pointer">Top Rated</li>
-            <li class="text-xs text-lightApp cursor-pointer">Upcoming</li>
-          </ul>
-        </div>
+      <li [routerLink]="['movies']" class="cursor-pointer">
+        <h2
+          class="text-sm 2xl:text-lg font-semibold text-lightApp hover:text-primaryApp py-1 px-4 hover:bg-lightApp rounded
+          transition duration-200 ease-in-out"
+        >
+          🍿 Movies
+        </h2>
       </li>
     </ul>
   </div>
+
+  <!-- support -->
   <div
     class="w-full h-1/6 border-t border-white/50 p-4 flex flex-col justify-center items-center"
   >
