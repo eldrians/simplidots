@@ -93,7 +93,8 @@ gif
 
 #### PWA (mode offline)
 
-gif
+![pwa](https://github.com/eldrians/simplidots/assets/91566708/fa50d1f1-f995-4dfe-868b-c3257f2824ed)
+
 
 ### Unit Test
 
