@@ -2,9 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { IMovie } from '../../../../app/core/interfaces/movie.model';
 import { MovieService } from '../../../../app/core/services';
+import { CardComponent } from 'src/app/shared/components';
+import { CommonModule } from '@angular/common';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @Component({
   selector: 'app-movie-list',
+  standalone: true,
+  imports: [CommonModule, CardComponent, InfiniteScrollModule],
   templateUrl: './movie-list.component.html',
 })
 export class MovieListComponent implements OnInit {

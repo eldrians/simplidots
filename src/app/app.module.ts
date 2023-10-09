@@ -6,35 +6,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
-import { MovieListComponent } from './pages/movie/movie-list/movie-list.component';
-import { UserFavoriteComponent } from './pages/user/user-favorite/user-favorite.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ServiceWorkerModule } from '@angular/service-worker';
 import {
+  FooterComponent,
   HeaderComponent,
   SidebarComponent,
-  CardComponent,
-  ButtonComponent,
-  FooterComponent,
 } from './shared/components';
-import { MovieDetailsComponent } from './pages/movie/movie-details/movie-details.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ListComponent } from './shared/components/list/list.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    SidebarComponent,
-    MovieListComponent,
-    UserFavoriteComponent,
-    CardComponent,
-    ButtonComponent,
-    FooterComponent,
-    MovieDetailsComponent,
-    ListComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -42,12 +24,16 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     FontAwesomeModule,
     NgbModule,
     InfiniteScrollModule,
+    RouterModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
+      registrationStrategy: 'registerWhenStable:30000',
     }),
+    SidebarComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

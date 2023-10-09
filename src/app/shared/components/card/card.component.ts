@@ -1,6 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { IMovie } from '../../../../app/core/interfaces/movie.model';
 import { UserService } from '../../../../app/core/services';
+import { ButtonComponent } from '../button/button.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DatePipe } from '@angular/common';
 
 type TFavoriteHandler = {
   media_type: string;
@@ -10,6 +15,14 @@ type TFavoriteHandler = {
 
 @Component({
   selector: 'app-card',
+  standalone: true,
+  imports: [
+    RouterModule,
+    ButtonComponent,
+    NgbModule,
+    FontAwesomeModule,
+    DatePipe,
+  ],
   templateUrl: './card.component.html',
 })
 export class CardComponent {

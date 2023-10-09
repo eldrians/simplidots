@@ -2,9 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { IMovie } from '../../../../app/core/interfaces/movie.model';
 import { MovieService, UserService } from '../../../../app/core/services';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { CardComponent } from 'src/app/shared/components';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-user-favorite',
+  standalone: true,
+  imports: [CommonModule, InfiniteScrollModule, CardComponent],
   templateUrl: './user-favorite.component.html',
 })
 export class UserFavoriteComponent implements OnInit {

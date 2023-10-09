@@ -13,7 +13,7 @@
   <div class="w-full grid grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-6">
     <div *ngFor="let movie of moviesLimit">
       <app-card [movie]="movie" [toAdd]="true"></app-card>
-    </div>
+    </div> 
     <div *ngIf="isLoading">Loading...</div>
   </div>
 </div>

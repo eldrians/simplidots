@@ -1,17 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { MovieService, UserService } from '../../../../app/core/services';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { MovieService } from '../../../../app/core/services';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CommonModule, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-movie-detail',
+  standalone: true,
+  imports: [CommonModule, NgbModule, RouterModule, DatePipe],
   templateUrl: './movie-details.component.html',
 })
 export class MovieDetailsComponent implements OnInit {
   movie: any;
 
+  // if (this.movie && this.movie.poster_path) {
+  //   this.imgBaseUrl = this.storage.getImageBaseUrl()
+  //   this.posterUrl = this.imgBaseUrl + 'w154' + this.movie.poster_path;
+  // } else {
+  //   this.posterUrl = 'http://via.placeholder.com/154x218?text=Not+avaliable';
+  // }
   constructor(
     private movieServices: MovieService,
-    private userServices: UserService,
     private router: ActivatedRoute
   ) {}
 
