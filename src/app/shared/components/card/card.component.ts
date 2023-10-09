@@ -1,11 +1,14 @@
 import { Component, Input } from '@angular/core';
-import { IMovie } from '../../../../app/core/interfaces/movie.model';
-import { UserService } from '../../../../app/core/services';
-import { ButtonComponent } from '../button/button.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DatePipe } from '@angular/common';
+
+import { IMovie } from '../../../../app/core/interfaces/movie.model';
+import { UserService } from '../../../../app/core/services';
+import { ButtonComponent } from '../button/button.component';
+
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 type TFavoriteHandler = {
   media_type: string;
@@ -18,10 +21,10 @@ type TFavoriteHandler = {
   standalone: true,
   imports: [
     RouterModule,
-    ButtonComponent,
     NgbModule,
     FontAwesomeModule,
     DatePipe,
+    ButtonComponent,
   ],
   templateUrl: './card.component.html',
 })
@@ -29,6 +32,7 @@ export class CardComponent {
   @Input() movie: IMovie | undefined;
   @Input() toAdd?: boolean;
   favoriteHandler: TFavoriteHandler | undefined;
+  faStar = faStar;
 
   constructor(private userServices: UserService) {}
 
@@ -47,7 +51,8 @@ export class CardComponent {
       };
     }
     this.userServices.favoriteHandler(this.favoriteHandler).subscribe((res) => {
-      console.log(res);
+      
+      // return alert
     });
   }
 

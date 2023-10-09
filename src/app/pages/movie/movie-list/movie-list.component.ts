@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { IMovie } from '../../../../app/core/interfaces/movie.model';
 import { MovieService } from '../../../../app/core/services';
-import { CardComponent } from 'src/app/shared/components';
 import { CommonModule } from '@angular/common';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-import { LoadingComponent } from 'src/app/shared/components/loading/loading.component';
+import {
+  CardComponent,
+  LoadingComponent,
+} from '../../../../app/shared/components';
 
 @Component({
   selector: 'app-movie-list',
