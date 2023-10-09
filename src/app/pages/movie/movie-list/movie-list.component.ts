@@ -5,11 +5,17 @@ import { MovieService } from '../../../../app/core/services';
 import { CardComponent } from 'src/app/shared/components';
 import { CommonModule } from '@angular/common';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { LoadingComponent } from 'src/app/shared/components/loading/loading.component';
 
 @Component({
   selector: 'app-movie-list',
   standalone: true,
-  imports: [CommonModule, CardComponent, InfiniteScrollModule],
+  imports: [
+    CommonModule,
+    CardComponent,
+    InfiniteScrollModule,
+    LoadingComponent,
+  ],
   templateUrl: './movie-list.component.html',
 })
 export class MovieListComponent implements OnInit {

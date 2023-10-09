@@ -5,11 +5,17 @@ import { MovieService, UserService } from '../../../../app/core/services';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { CardComponent } from 'src/app/shared/components';
 import { CommonModule } from '@angular/common';
+import { LoadingComponent } from 'src/app/shared/components/loading/loading.component';
 
 @Component({
   selector: 'app-user-favorite',
   standalone: true,
-  imports: [CommonModule, InfiniteScrollModule, CardComponent],
+  imports: [
+    CommonModule,
+    InfiniteScrollModule,
+    CardComponent,
+    LoadingComponent,
+  ],
   templateUrl: './user-favorite.component.html',
 })
 export class UserFavoriteComponent implements OnInit {
