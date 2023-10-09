@@ -85,11 +85,15 @@ masuk ke dist/simplidots, lalu open integrated terminal dan run command dibawah
 
 #### Mark as Favorite
 
-gif
+![mark-as-fav](https://github.com/eldrians/simplidots/assets/91566708/3193886c-05f2-48b4-80a6-c12d9a692c86)
+
 
 #### Detail
 
-gif
+![hp](https://github.com/eldrians/simplidots/assets/91566708/aebf34f7-d29e-469d-8b72-b9d4f8131d30)
+
+![laptop-detail](https://github.com/eldrians/simplidots/assets/91566708/5d2d4d41-6613-4729-b036-273b5c472184)
+
 
 #### Reponsive
 
