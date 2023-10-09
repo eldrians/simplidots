@@ -8,12 +8,11 @@ Aplikasi Test Frontend Developer, berikut adalah daftar kriteria wajib yang suda
 | `Intergasi API`                   | `kriteria wajib` | **DONE**                                   |
 | `Tampilan Film, Favorite, Detail` | `kriteria wajib` | **DONE**                                   |
 | `Responsif`                       | `kriteria wajib` | **DONE** -> smartphone, tablet, laptop, pc |
-| `Penyimpanan Lokal`               | `kriteria wajib` | **DONE** -> PWA                            |
 | `Angular Version`                 | `kriteria wajib` | **DONE** -> v16.1.0                        |
 | `Clean Code`                      | `Optional`       | **DONE**                                   |
 | `Multiple Bahasa`                 | `Optional`       | **DONE** -> idn dan en                     |
 | `Reusable Component`              | `Optional`       | **DONE** -> component, indirective         |
-| `Unit Testing`                    | `Optional`       | **DONE** -> Jest 100% coverage             |
+| `Unit Testing`                    | `Optional`       | **DONE** -> Jest 100% coverage (!standalone)             |
 | `PWA (Progressive Web App)`       | `Optional`       | **DONE** -> mode offline                   |
 | `Infinite Scroll`                 | `Optional`       | **DONE** -> ngx-infinite-scroll            |
 
