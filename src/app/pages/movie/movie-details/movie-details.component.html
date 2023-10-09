@@ -26,10 +26,8 @@
       <div
         class="flex flex-row gap-2 text-xs 2xl:text-sm my-2 text-primaryApp/70"
       >
-        <div
-          *ngFor="let genre of movieDetail.genres"
-        >
-          <app-button [routerLink]="['/movies']" [title]="genre.name"></app-button>
+        <div *ngFor="let genre of movieDetail.genres">
+          <app-button [title]="genre.name"></app-button>
         </div>
       </div>
 
