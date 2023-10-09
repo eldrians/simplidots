@@ -55,7 +55,7 @@ export class UserFavoriteComponent implements OnInit {
     this.movieServices
       .getMoviesByLimit(this.currentPage, 6, this.favouriteMovie)
       .subscribe({
-        next: (res) => (this.moviesLimit = res),
+        next: (res) => (this.moviesLimit = res.reverse()),
         error: (err) => console.log(err),
         complete: () => this.toggleLoading(),
       });

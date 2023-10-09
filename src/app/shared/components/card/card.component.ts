@@ -59,7 +59,9 @@ export class CardComponent {
           'Difavoritkan',
           `Film ${title} ditambahkan ke favorite`,
           'success'
-        );
+        ).then(() => {
+          location.reload();
+        });
       } else {
         Swal.fire(
           'Dihapus',
