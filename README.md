@@ -115,8 +115,8 @@ masuk ke dist/simplidots, lalu open integrated terminal dan run command dibawah
 #### coverage
 
 walaupun sudah 100% namun, ada beberapa file yang tidak sempat di test, dikarenakan masih belum mengerti tentang unit test pada standalone component
-![image](https://github.com/eldrians/simplidots/assets/91566708/89488e86-0634-4242-8c88-e83c40e3c01f)
 
+![image](https://github.com/eldrians/simplidots/assets/91566708/6ebc5d14-db72-47eb-a9fe-0a05dac22853)
 
 ## API Reference
 
