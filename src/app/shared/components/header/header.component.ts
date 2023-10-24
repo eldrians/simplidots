@@ -16,7 +16,9 @@ export class HeaderComponent implements OnInit {
   faX = faX;
 
   isOpen: boolean = false;
-  constructor() {}
+  constructor() {
+    console.log('header done!');
+  }
 
   ngOnInit() {
     this.menuClick(this.isOpen);

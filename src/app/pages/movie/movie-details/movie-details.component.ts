@@ -3,12 +3,22 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { MovieService } from '../../../../app/core/services';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CommonModule, DatePipe } from '@angular/common';
-import { ButtonComponent, LoadingComponent } from '../../../../app/shared/components';
+import {
+  ButtonComponent,
+  LoadingComponent,
+} from '../../../../app/shared/components';
 
 @Component({
   selector: 'app-movie-detail',
   standalone: true,
-  imports: [CommonModule, NgbModule, RouterModule, DatePipe, LoadingComponent, ButtonComponent],
+  imports: [
+    CommonModule,
+    NgbModule,
+    RouterModule,
+    DatePipe,
+    LoadingComponent,
+    ButtonComponent,
+  ],
   templateUrl: './movie-details.component.html',
 })
 export class MovieDetailsComponent implements OnInit {
@@ -20,7 +30,9 @@ export class MovieDetailsComponent implements OnInit {
   constructor(
     private movieServices: MovieService,
     private router: ActivatedRoute
-  ) {}
+  ) {
+    console.log('movie-details done!');
+  }
 
   ngOnInit(): void {
     let getParamId: number | string | null =

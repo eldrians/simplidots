@@ -37,7 +37,9 @@ export class CardComponent {
   favoriteHandler: TFavoriteHandler | undefined;
   faStar = faStar;
 
-  constructor(private userServices: UserService) {}
+  constructor(private userServices: UserService) {
+    console.log('card done!');
+  }
 
   setFavorite(id: number, title: string) {
     if (this.toAdd == true) {

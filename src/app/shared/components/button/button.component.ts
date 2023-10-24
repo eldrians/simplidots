@@ -33,6 +33,10 @@ export class ButtonComponent {
   @Input() title: any;
   @Input() toAdd?: boolean;
 
+  constructor() {
+    console.log('button done!');
+  }
+
   varType(): boolean {
     return typeof this.title === 'string';
   }

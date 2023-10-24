@@ -35,7 +35,9 @@ export class UserFavoriteComponent implements OnInit {
   constructor(
     private userServices: UserService,
     private movieServices: MovieService
-  ) {}
+  ) {
+    console.log('user-favorite done!');
+  }
 
   ngOnInit(): void {
     this.getFavouriteMovie();

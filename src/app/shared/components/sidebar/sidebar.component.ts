@@ -7,4 +7,8 @@ import { RouterModule } from '@angular/router';
   imports: [RouterModule],
   templateUrl: './sidebar.component.html',
 })
-export class SidebarComponent {}
+export class SidebarComponent {
+  constructor() {
+    console.log('sidebar done!');
+  }
+}
