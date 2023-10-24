@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterLinkActive, RouterLink],
   templateUrl: './sidebar.component.html',
 })
 export class SidebarComponent {
-  constructor() {
-    console.log('sidebar done!');
-  }
+  constructor() {}
 }

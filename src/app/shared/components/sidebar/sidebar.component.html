@@ -9,19 +9,23 @@
   <!-- menu -->
   <div class="w-full h-4/6 p-6">
     <ul class="flex flex-col gap-3 my-4">
-      <li [routerLink]="['favorites']" class="cursor-pointer">
-        <h2
+      <li>
+        <a
           class="text-sm 2xl:text-lg font-semibold text-lightApp hover:text-primaryApp py-1 px-4 hover:bg-lightApp rounded transition duration-200 ease-in-out"
+          routerLinkActive="active"
+          routerLink="/favorites"
         >
-          🔥 My Favorites
-        </h2>
+          🔥 My Favorite
+        </a>
       </li>
       <li [routerLink]="['/movies']" class="cursor-pointer">
-        <h2
+        <a
           class="text-sm 2xl:text-lg font-semibold text-lightApp hover:text-primaryApp py-1 px-4 hover:bg-lightApp rounded transition duration-200 ease-in-out"
+          routerLinkActive="active"
+          routerLink="/movies"
         >
           🍿 Movies
-        </h2>
+        </a>
       </li>
     </ul>
   </div>

@@ -19,8 +19,4 @@ import { Component } from '@angular/core';
     </div>
   `,
 })
-export class FooterComponent {
-  constructor() {
-    console.log('footer done!');
-  }
-}
+export class FooterComponent {}
