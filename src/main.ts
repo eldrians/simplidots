@@ -8,10 +8,11 @@ import {
   withInterceptorsFromDi,
 } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
+import { AppModule } from './app/app.module';
 
 bootstrapApplication(AppComponent, {
   providers: [
-    importProvidersFrom(BrowserModule),
+    importProvidersFrom(BrowserModule, AppModule),
     provideHttpClient(withInterceptorsFromDi()),
     provideRouter([
       {

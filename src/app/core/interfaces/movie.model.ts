@@ -1,4 +1,5 @@
 export interface IRoot {
+  // map(arg0: (res: IMovie) => IMovie): IMovie[];
   page: number;
   results: IMovie[];
   total_pages: number;

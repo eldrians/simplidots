@@ -32,9 +32,7 @@ export class MovieListComponent implements OnInit {
   toggleLoading = () => (this.isLoading = !this.isLoading);
   currentPage: number = 1;
 
-  constructor(private movieServices: MovieService) {
-    console.log('movie-list done!');
-  }
+  constructor(private movieServices: MovieService) {}
 
   ngOnInit(): void {
     this.getMovies();

@@ -24,8 +24,4 @@ import { RouterModule } from '@angular/router';
   `,
   imports: [SidebarComponent, HeaderComponent, FooterComponent, RouterModule],
 })
-export class AppComponent {
-  constructor() {
-    console.log('app-component done!');
-  }
-}
+export class AppComponent {}
